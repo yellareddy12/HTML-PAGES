@@ -1,0 +1,23 @@
+form {
+display:flex;
+flex-wrap:wrap;
+gap:5px;
+}
+input {
+flex:5px;
+}
+button:active {
+flex:5px;
+background-color:cyan;
+color:red;
+font-weight:bold;
+cursor:pointer;
+} 
+.content{
+color:red;
+font-size:50px;
+
+}
+.ra{
+
+}

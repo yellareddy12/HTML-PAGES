@@ -1,0 +1,58 @@
+<html>
+<head>
+<script>
+function register() {
+let name=document.getElementById("name").value;
+let password=document.getElementById("pass").value;
+let password1=document.getElementById("pass1").value;
+let password2=document.getElementById("email").value;
+let re=/^[a-zA-z]+@[A-Za-z]+\.[A-Za-z]{2, }$/;
+let r=/^[a-zA-z\s]+$/;
+if(!name.match(r)){
+alert("enter valid name");
+return false;
+}if(password.length<6){
+alert("enter password above six digits");
+return false;
+}
+if(password!=password1){
+alert("password does not match");
+return false;
+}
+if(!password2.match(re)){
+alert("enter valid email");
+return false;
+}else {
+return true;
+}
+}
+</script>
+</head>
+<body align="center">
+<h1> Login form</h1>
+<form action=".htnl" method="post">
+<table border=1 align="center">
+<tr>
+<td>User name</td>
+<td><input type="text" placeholder="enter your name" id="name"></td>
+</tr>h
+<td>Password</td>
+<td><input type="password" placeholder="enter your password" id="pass"></td>
+</tr>
+<tr>
+<td>re ennter Password</td>
+<td><input type="password" placeholder="re enter password" id="pass1"></td>
+</tr>
+<tr>
+<td>Email</td>
+<td><input type="text" placeholder="email" id="email"></td>
+</tr>
+
+<tr>
+<td></td>
+<td><input type="submit" value="login" onclick="return register()"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

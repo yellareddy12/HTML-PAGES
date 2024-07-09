@@ -1,0 +1,45 @@
+<html>
+<head>
+<style>
+span {
+animation-name:blink;
+animation-duration:1s;
+animation-iteration-count:infinite;
+}
+@keyframes blink {
+
+0% {color:red;}
+
+50% {color:red;}
+100% {color:green;}
+}
+</style>
+</head>
+<body>
+<h1><marquee scrollingamount="5" direction="left">check for <span>vote</span> eligibility</marquee></h1>
+<div>
+<lable>User name:</lable>
+<input type="text" id="num1">
+<lable>age:</lable>
+<input type="text" id="num2"><br><br>
+Gender:<input type="radio" name="gender" id="ge">male<input type="radio" name="gender" id="ge">female
+</div>
+<script>
+function valid(){
+let name=document.getElementById("num1").value;
+let age=document.getElementById("num2").value;
+let gender=document.getElementById("ge").value;
+let b=parseInt(age);
+if(gender=="male"&&b>21){
+console.log("name:",name);
+console.log("age:",b);
+alert("elegibale for marriage");
+}else if(gender=="female"&&b>20) {
+console.log("not eligibale for marriage");
+}
+}
+</script>
+</br>
+<input type="submit" value="vote" onclick="valid()">
+</body>
+</html>

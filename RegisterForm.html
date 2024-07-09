@@ -1,0 +1,63 @@
+<html>
+<head>
+<style>
+table {
+text-align:center;
+border:2px solid red;
+border-radius:5px;
+margin:40px;
+background-color:white;
+}
+tr,td{
+padding:5px;
+text-decoration:none;
+border:2px solid blue;
+border-radius:5px;
+}
+input[type="submit"] {
+background-color:white;
+color:blue;
+font-sizeS:bold;
+border-radius:5px;
+float:right;
+}
+</style>
+</head>
+<body>
+<script>
+function result() {
+let re=/^[a-zA-Z\s]+$/;
+let n=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+let name=document.getElementById("name").value;
+let p=document.getElementById("pass").value;
+let email=document.getElementById("email").value;
+if(!name.match(re)){
+alert("please enter valid name");
+return false;
+}
+else if(p.length<=0){
+alert("please enter valid password");
+return false;
+}
+else if(!email.match(n)){
+alert(" enter valid mail");
+return false;
+}else {
+return true;
+}
+}
+
+</script>
+<form method="post" action="hari.html">
+<table border=1 align="center">
+<caption><span style="color:blue;font-size:20px;"><marquee scrollamount=5 direction="left" width=75%> Regester form </marquee></span> </caption>
+<tr><td>Enter your name:</td><td><input type="text" id="name"></td>
+<tr><td>Enter your password:</td><td><input type="password" id="pass"></td></tr>
+<tr><td>Enter your email:</td><td><input type="text" id="email"></td></tr>
+<tr><td></td><td>
+<input type="submit" onclick="return result()"></td></tr>
+</form>
+</table>
+
+</body>
+</html> 
